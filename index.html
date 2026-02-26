@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zenix | Consultoria Tecnológica para Seguros</title>
+    <meta name="description" content="Consultoria tecnológica e governança em TI especializada para o mercado de seguros. Preenchemos o gap entre estratégia e execução.">
     
     <!-- Fontes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -264,45 +265,48 @@
             </div>
 
             <div id="form-container" class="max-w-2xl mx-auto">
-                <form class="space-y-6" id="contactForm">
+                <form action="https://formsubmit.co/contato@zenixtech.co" method="POST" class="space-y-6" id="contactForm">
+                    <!-- Campo oculto para desativar o captcha do FormSubmit (opcional, mas melhora UX) -->
+                    <input type="hidden" name="_captcha" value="false">
+                    
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
-                            <label class="block text-sm font-medium text-gray-400 mb-2">Nome Completo</label>
-                            <input type="text" required class="form-input" placeholder="Seu nome">
+                            <label for="nome" class="block text-sm font-medium text-gray-400 mb-2">Nome Completo</label>
+                            <input type="text" id="nome" name="nome" required class="form-input" placeholder="Seu nome">
                         </div>
                         <div>
-                            <label class="block text-sm font-medium text-gray-400 mb-2">E-mail Corporativo</label>
-                            <input type="email" required class="form-input" placeholder="email@empresa.com">
+                            <label for="email" class="block text-sm font-medium text-gray-400 mb-2">E-mail Corporativo</label>
+                            <input type="email" id="email" name="email" required class="form-input" placeholder="email@empresa.com">
                         </div>
                     </div>
                     
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
-                            <label class="block text-sm font-medium text-gray-400 mb-2">Empresa</label>
-                            <input type="text" required class="form-input" placeholder="Seguradora/Corretora">
+                            <label for="empresa" class="block text-sm font-medium text-gray-400 mb-2">Empresa</label>
+                            <input type="text" id="empresa" name="empresa" required class="form-input" placeholder="Seguradora/Corretora">
                         </div>
                         <div>
-                            <label class="block text-sm font-medium text-gray-400 mb-2">Qual seu interesse principal?</label>
+                            <label for="interesse" class="block text-sm font-medium text-gray-400 mb-2">Qual seu interesse principal?</label>
                             <div class="relative">
-                                <select class="form-input appearance-none">
-                                    <option>Zenix Deep Dive (Diagnóstico Completo)</option>
-                                    <option>RFP Estruturado / Tech Broker</option>
-                                    <option>Governança de Fornecedores Tech</option>
-                                    <option>Outro (Descrever abaixo)</option>
+                                <select id="interesse" name="interesse" class="form-input appearance-none">
+                                    <option value="Deep Dive">Zenix Deep Dive (Diagnóstico Completo)</option>
+                                    <option value="RFP / Tech Broker">RFP Estruturado / Tech Broker</option>
+                                    <option value="Governança">Governança de Fornecedores Tech</option>
+                                    <option value="Outro">Outro (Descrever abaixo)</option>
                                 </select>
                                 <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-400">
-                                    <i data-lucide="chevron-down" class="w-4 h-4"></i>
+                                    <i data-lucide="chevron-down" class="w-4 h-4" aria-hidden="true"></i>
                                 </div>
                             </div>
                         </div>
                     </div>
 
                     <div>
-                        <label class="block text-sm font-medium text-gray-400 mb-2">Descreva brevemente o gargalo atual da sua operação</label>
-                        <textarea rows="4" required class="form-input resize-none" placeholder="Onde o desalinhamento tecnológico está custando dinheiro hoje?"></textarea>
+                        <label for="mensagem" class="block text-sm font-medium text-gray-400 mb-2">Descreva brevemente o gargalo atual da sua operação</label>
+                        <textarea id="mensagem" name="mensagem" rows="4" required class="form-input resize-none" placeholder="Onde o desalinhamento tecnológico está custando dinheiro hoje?"></textarea>
                     </div>
 
-                    <button type="submit" class="w-full bg-zenix-purple hover:bg-purple-600 text-white py-4 rounded-md font-semibold text-lg transition-all glow-effect flex items-center justify-center gap-2">
+                    <button type="submit" id="submitBtn" class="w-full bg-zenix-purple hover:bg-purple-600 text-white py-4 rounded-md font-semibold text-lg transition-all glow-effect flex items-center justify-center gap-2">
                         Solicitar Reunião Executiva
                     </button>
                 </form>
@@ -341,8 +345,48 @@
         // Lógica de Submissão do Formulário
         document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            this.classList.add('hidden');
-            document.getElementById('successMessage').classList.remove('hidden');
+            
+            const form = this;
+            const submitBtn = document.getElementById('submitBtn');
+            const originalText = submitBtn.innerHTML;
+            
+            // Feedback visual de carregamento
+            submitBtn.innerHTML = '<i data-lucide="loader-2" class="w-5 h-5 animate-spin"></i> Processando...';
+            submitBtn.disabled = true;
+            lucide.createIcons();
+
+            // Coleta os dados usando o atributo 'name' dos inputs
+            const formData = new FormData(form);
+
+            // Requisição AJAX para o FormSubmit
+            fetch('https://formsubmit.co/ajax/contato@zenixtech.co', {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Erro HTTP: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data => {
+                if(data.success) {
+                    form.classList.add('hidden');
+                    document.getElementById('successMessage').classList.remove('hidden');
+                } else {
+                    throw new Error('Falha na resposta do servidor.');
+                }
+            })
+            .catch(error => {
+                console.error('Erro:', error);
+                // Restaurar botão em caso de falha (alertas nativos evitados em produção, mas usados aqui como fallback de erro)
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+                lucide.createIcons();
+            });
         });
     </script>
 </body>
