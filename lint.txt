@@ -1,0 +1,19 @@
+
+> temp-app@0.0.0 lint
+> eslint .
+
+
+C:\Users\emman\Documents\Dev\Landing-Page-Zenix\src\components\DeepDive.jsx
+  2:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+C:\Users\emman\Documents\Dev\Landing-Page-Zenix\src\components\Hero.jsx
+  2:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+C:\Users\emman\Documents\Dev\Landing-Page-Zenix\src\components\LeadGeneration.jsx
+  2:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+C:\Users\emman\Documents\Dev\Landing-Page-Zenix\src\components\ProblemSection.jsx
+  2:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+Ô£û 4 problems (4 errors, 0 warnings)
+

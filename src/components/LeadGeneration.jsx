@@ -4,10 +4,11 @@ import { Send, ArrowRight } from 'lucide-react';
 
 export default function LeadGeneration() {
     return (
-        <section id="contato" className="py-24 relative z-10 bg-[#050508] border-t border-white/5">
+        <section aria-labelledby="lead-heading" id="contato" className="py-24 relative z-10 bg-zenix-surface-alt border-t border-white/5">
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16">
                     <motion.h2
+                        id="lead-heading"
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
@@ -31,7 +32,7 @@ export default function LeadGeneration() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: 0.2 }}
-                    className="bg-[#0a0a0c]/80 backdrop-blur-xl border border-zenix-purple/20 p-8 md:p-12 rounded-2xl shadow-[0_0_40px_-15px_rgba(93,38,214,0.3)] relative overflow-hidden"
+                    className="bg-zenix-surface/80 backdrop-blur-xl border border-zenix-purple/20 p-8 md:p-12 rounded-2xl shadow-[0_0_40px_-15px_rgba(93,38,214,0.3)] relative overflow-hidden"
                 >
                     {/* Decorative element */}
                     <div className="absolute top-0 right-0 w-64 h-64 bg-zenix-purple/10 rounded-full blur-[80px] -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
@@ -53,9 +54,10 @@ export default function LeadGeneration() {
                                     type="text"
                                     id="name"
                                     name="name"
+                                    autoComplete="name"
                                     required
                                     placeholder="Ex: João Silva"
-                                    className="w-full bg-[#020204]/50 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-zenix-purple focus:ring-1 focus:ring-zenix-purple transition-colors"
+                                    className="w-full bg-zenix-bg/50 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-zenix-primary focus:ring-1 focus:ring-zenix-primary transition-colors"
                                 />
                             </div>
                             <div className="space-y-2">
@@ -64,9 +66,10 @@ export default function LeadGeneration() {
                                     type="email"
                                     id="email"
                                     name="email"
+                                    autoComplete="email"
                                     required
                                     placeholder="joao@empresa.com.br"
-                                    className="w-full bg-[#020204]/50 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-zenix-purple focus:ring-1 focus:ring-zenix-purple transition-colors"
+                                    className="w-full bg-zenix-bg/50 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-zenix-primary focus:ring-1 focus:ring-zenix-primary transition-colors"
                                 />
                             </div>
                         </div>
@@ -78,9 +81,10 @@ export default function LeadGeneration() {
                                     type="text"
                                     id="company"
                                     name="company"
+                                    autoComplete="organization"
                                     required
                                     placeholder="Nome da Seguradora/Corretora"
-                                    className="w-full bg-[#020204]/50 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-zenix-purple focus:ring-1 focus:ring-zenix-purple transition-colors"
+                                    className="w-full bg-zenix-bg/50 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-zenix-primary focus:ring-1 focus:ring-zenix-primary transition-colors"
                                 />
                             </div>
                             <div className="space-y-2">
@@ -89,9 +93,10 @@ export default function LeadGeneration() {
                                     type="text"
                                     id="role"
                                     name="role"
+                                    autoComplete="organization-title"
                                     required
                                     placeholder="Ex: CTO, Diretor de Inovação"
-                                    className="w-full bg-[#020204]/50 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-zenix-purple focus:ring-1 focus:ring-zenix-purple transition-colors"
+                                    className="w-full bg-zenix-bg/50 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-zenix-primary focus:ring-1 focus:ring-zenix-primary transition-colors"
                                 />
                             </div>
                         </div>
@@ -104,17 +109,17 @@ export default function LeadGeneration() {
                                 required
                                 rows="4"
                                 placeholder="Descreva brevemente o cenário atual e o que buscam solucionar..."
-                                className="w-full bg-[#020204]/50 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-zenix-purple focus:ring-1 focus:ring-zenix-purple transition-colors resize-none"
+                                className="w-full bg-zenix-bg/50 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-zenix-primary focus:ring-1 focus:ring-zenix-primary transition-colors resize-none"
                             ></textarea>
                         </div>
 
                         <div className="pt-4">
                             <button
                                 type="submit"
-                                className="group w-full md:w-auto bg-zenix-purple hover:bg-[#6c32f8] text-white px-8 py-4 rounded-lg font-semibold text-base transition-all hover:shadow-[0_0_20px_-5px_rgba(93,38,214,0.6)] flex items-center justify-center gap-2 mx-auto"
+                                className="group w-full md:w-auto bg-zenix-primary hover:bg-zenix-primary-hover text-white px-8 py-4 rounded-lg font-semibold text-base transition-all hover:shadow-[0_0_20px_-5px_rgba(93,38,214,0.6)] flex items-center justify-center gap-2 mx-auto"
                             >
                                 Solicitar Contato Executivo
-                                <Send className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                                <Send className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" aria-hidden="true" />
                             </button>
                         </div>
 

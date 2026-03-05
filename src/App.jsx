@@ -8,12 +8,14 @@ import LeadGeneration from './components/LeadGeneration';
 
 function App() {
   return (
-    <div className="bg-mesh min-h-screen text-gray-200 selection:bg-[#5D26D6] selection:text-white">
+    <div className="bg-mesh min-h-screen text-gray-200 selection:bg-zenix-primary selection:text-white">
       <Navbar />
-      <Hero />
-      <ProblemSection />
-      <DeepDive />
-      <LeadGeneration />
+      <main>
+        <Hero />
+        <ProblemSection />
+        <DeepDive />
+        <LeadGeneration />
+      </main>
       <Footer />
     </div>
   );

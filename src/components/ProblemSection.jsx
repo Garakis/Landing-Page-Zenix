@@ -17,10 +17,10 @@ const item = {
 
 export default function ProblemSection() {
     return (
-        <section id="o-gap" className="py-24 lg:py-32 relative z-10 border-t border-zenix-border/50 bg-zenix-surface/30 px-4 sm:px-6 lg:px-8">
+        <section aria-labelledby="problem-heading" id="o-gap" className="py-24 lg:py-32 relative z-10 border-t border-zenix-secondary/50 bg-zenix-surface/30 px-4 sm:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto">
                 <div className="mb-16 md:w-2/3">
-                    <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 tracking-tight">
+                    <h2 id="problem-heading" className="text-3xl md:text-5xl font-bold text-white mb-6 tracking-tight">
                         O problema não é a tecnologia.<br />É a falha de comunicação.
                     </h2>
                     <p className="text-lg text-gray-400 font-light leading-relaxed">
@@ -56,9 +56,9 @@ export default function ProblemSection() {
                     </motion.div>
 
                     {/* Bento Box 3 */}
-                    <motion.div variants={item} className="glass-card rounded-2xl p-8 hover-glow md:col-span-1 md:row-span-1 flex flex-col relative overflow-hidden group border-[#5D26D6]/20">
-                        <div className="absolute inset-0 bg-gradient-to-br from-[#5D26D6]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                        <Lightbulb className="text-[#a855f7] w-10 h-10 mb-6" />
+                    <motion.div variants={item} className="glass-card rounded-2xl p-8 hover-glow md:col-span-1 md:row-span-1 flex flex-col relative overflow-hidden group border-zenix-primary/20">
+                        <div className="absolute inset-0 bg-gradient-to-br from-zenix-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <Lightbulb className="text-zenix-accent w-10 h-10 mb-6" aria-hidden="true" />
                         <h3 className="text-xl font-semibold text-white mb-3">Oportunidade de Inovação Real</h3>
                         <p className="text-gray-400 text-sm leading-relaxed flex-grow relative z-10">
                             A Zenix elimina este atrito com um portfólio de soluções focado em governança e resultados tangíveis. Traduzimos as necessidades de negócio para os padrões de engenharia.
