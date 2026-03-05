@@ -1,56 +1,40 @@
 @import "tailwindcss";
 
 @theme {
-  --color-zenix-black: #020204;
-  --color-zenix-purple: #5D26D6;
-  --color-zenix-indigo: #1A0B3B;
-  --color-zenix-surface: #121215;
-  --color-zenix-border: #2A1F4C;
+  --font-sans: "Inter", sans-serif;
   
-  --font-sans: 'Inter', sans-serif;
+  --color-primary: #9333ea;
+  --color-primary-hover: #a855f7;
+  --color-secondary: #3b0764;
+  --color-dark-bg: #030303;
+  --color-dark-surface: #0a0a0a;
+  --color-dark-surface-2: #121212;
 }
 
 @layer base {
   body {
-    background-color: var(--color-zenix-black);
-    color: #e5e7eb;
+    background-color: var(--color-dark-bg);
+    color: var(--color-gray-400);
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
-  }
-  ::selection {
-    background-color: var(--color-zenix-purple);
-    color: white;
+    -moz-osx-font-smoothing: grayscale;
   }
 }
 
-@utility glass-card {
-  background-color: rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(24px);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  box-shadow: 0 0 40px -15px rgba(93, 38, 214, 0.3);
+html {
+  scroll-behavior: smooth;
 }
 
-@utility glow-text {
-  color: transparent;
-  background-clip: text;
-  background-image: linear-gradient(to right, var(--color-zenix-purple), #8a5cf5);
-}
-
-@utility hover-glow {
-  transition-property: all;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 300ms;
-  &:hover {
-    box-shadow: 0 0 30px -5px rgba(93, 38, 214, 0.4);
-    border-color: rgba(93, 38, 214, 0.3);
+@layer utilities {
+  .glow-purple {
+    box-shadow: 0 0 24px rgba(147, 51, 234, 0.3);
   }
-}
-
-.bg-mesh {
-  background-color: var(--color-zenix-black);
-  background-image: 
-    radial-gradient(at 0% 0%, rgba(26, 11, 59, 1) 0px, transparent 50%),
-    radial-gradient(at 100% 0%, rgba(93, 38, 214, 0.2) 0px, transparent 50%),
-    radial-gradient(at 100% 100%, rgba(26, 11, 59, 0.8) 0px, transparent 50%);
-  background-attachment: fixed;
+  .glow-purple:hover {
+    box-shadow: 0 0 32px rgba(147, 51, 234, 0.5);
+  }
+  .glass-card {
+    background: rgba(18, 18, 18, 0.6);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(147, 51, 234, 0.1);
+  }
 }
