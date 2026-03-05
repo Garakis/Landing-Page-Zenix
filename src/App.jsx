@@ -4,6 +4,7 @@ import Hero from './components/Hero';
 import ProblemSection from './components/ProblemSection';
 import DeepDive from './components/DeepDive';
 import Footer from './components/Footer';
+import LeadGeneration from './components/LeadGeneration';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Hero />
       <ProblemSection />
       <DeepDive />
+      <LeadGeneration />
       <Footer />
     </div>
   );
