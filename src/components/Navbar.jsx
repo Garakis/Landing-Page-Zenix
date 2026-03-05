@@ -16,8 +16,7 @@ export default function Navbar() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center h-20">
                     <div className="flex-shrink-0 flex items-center gap-2">
-                        <span className="text-white font-bold text-2xl tracking-tighter">ZENIX</span>
-                        <div className="w-2 h-2 bg-[#5D26D6] rounded-full"></div>
+                        <img src="/zenix-favicon.svg" alt="Zenix Technology Consulting" className="h-6 w-auto" />
                     </div>
                     <div className="hidden md:flex items-center space-x-8">
                         <a href="#o-gap" className="text-sm font-medium text-gray-300 hover:text-white transition-colors">O Gap do Mercado</a>
