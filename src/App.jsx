@@ -1,8 +1,9 @@
 import React from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import ProblemSection from './components/ProblemSection';
-import DeepDive from './components/DeepDive';
+import StrategicPositioning from './components/StrategicPositioning';
+import Differentiators from './components/Differentiators';
+import TechPlatform from './components/TechPlatform';
 import Footer from './components/Footer';
 import LeadGeneration from './components/LeadGeneration';
 
@@ -12,8 +13,9 @@ function App() {
       <Navbar />
       <main>
         <Hero />
-        <ProblemSection />
-        <DeepDive />
+        <StrategicPositioning />
+        <Differentiators />
+        <TechPlatform />
         <LeadGeneration />
       </main>
       <Footer />

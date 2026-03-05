@@ -14,7 +14,7 @@ export default function LeadGeneration() {
                         viewport={{ once: true }}
                         className="text-3xl md:text-5xl font-bold text-white mb-6 tracking-tight"
                     >
-                        Inicie sua Transformação
+                        Expanda as suas margens com Engenharia.
                     </motion.h2>
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}
@@ -23,7 +23,7 @@ export default function LeadGeneration() {
                         transition={{ delay: 0.1 }}
                         className="text-lg md:text-xl text-gray-400 font-light max-w-2xl mx-auto"
                     >
-                        Programe uma conversa executiva para avaliarmos o gap tecnológico e a estratégia de modernização da sua operação.
+                        Programe uma conversa com o nosso board executivo. Mapeamos o seu contexto tecnológico para alavancar a próxima fase de consolidação corporativa.
                     </motion.p>
                 </div>
 

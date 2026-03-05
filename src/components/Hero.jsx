@@ -36,7 +36,7 @@ export default function Hero() {
                     transition={{ duration: 0.6, delay: 0.2 }}
                     className="mt-6 text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto mb-12 font-light leading-relaxed"
                 >
-                    As seguradoras não dominam código. Os fornecedores tecnológicos não dominam seguros. A <strong className="text-white font-medium">Zenix</strong> é a ponte definitiva entre a estratégia executiva e a execução tecnológica implacável.
+                    Somos uma consultoria tecnológica de elite focada 100% no ecossistema segurador. Alinhamos a estratégia C-Level com execução de engenharia implacável para gerar resultados tangíveis.
                 </motion.p>
 
                 <motion.div
@@ -51,6 +51,27 @@ export default function Hero() {
                     </a>
                 </motion.div>
             </div>
+
+            {/* KPIs / Authority indicators */}
+            <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                className="mt-20 relative z-10 pt-10 border-t border-white/5 grid grid-cols-1 md:grid-cols-3 gap-8 text-left max-w-5xl mx-auto"
+            >
+                <div className="pl-6 border-l-2 border-zenix-primary">
+                    <h4 className="text-4xl font-bold text-white mb-2">+40<span className="text-zenix-primary">%</span></h4>
+                    <p className="text-sm text-gray-400">Otimização média de OpEx Tecnológico</p>
+                </div>
+                <div className="pl-6 border-l-2 border-zenix-primary">
+                    <h4 className="text-4xl font-bold text-white mb-2">100<span className="text-zenix-primary">%</span></h4>
+                    <p className="text-sm text-gray-400">Foco Exclusivo no Mercado Segurador</p>
+                </div>
+                <div className="pl-6 border-l-2 border-zenix-primary">
+                    <h4 className="text-4xl font-bold text-white mb-2">360<span className="text-zenix-primary">°</span></h4>
+                    <p className="text-sm text-gray-400">Atuação end-to-end: da avaliação ao deploy</p>
+                </div>
+            </motion.div>
         </section>
     );
 }
