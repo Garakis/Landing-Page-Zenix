@@ -16,7 +16,7 @@ export default function Hero() {
                     className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-zenix-purple/30 bg-zenix-purple/10 text-zenix-accent text-xs font-semibold uppercase tracking-wider mb-8"
                 >
                     <ShieldCheck className="w-4 h-4" />
-                    Especialistas no Mercado de Seguros
+                    Seu CTO as a Service Modular
                 </motion.div>
 
                 <motion.h1
@@ -24,10 +24,10 @@ export default function Hero() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.1 }}
-                    className="text-5xl md:text-7xl lg:text-8xl font-black text-white tracking-tighter mb-6 leading-[1.1]"
+                    className="text-5xl md:text-7xl lg:text-7xl font-black text-white tracking-tighter mb-6 leading-[1.1]"
                 >
-                    O mercado de seguros parou no tempo. <br className="hidden md:block" />
-                    <span className="glow-text">Nós trouxemos o futuro.</span>
+                    Ferramentas que não conversam? <br className="hidden md:block" />
+                    <span className="glow-text">Nós arrumamos a casa.</span>
                 </motion.h1>
 
                 <motion.p
@@ -36,7 +36,7 @@ export default function Hero() {
                     transition={{ duration: 0.6, delay: 0.2 }}
                     className="mt-6 text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto mb-12 font-light leading-relaxed"
                 >
-                    Somos uma consultoria tecnológica de elite focada 100% no ecossistema segurador. Alinhamos a estratégia C-Level com execução de engenharia implacável para gerar resultados tangíveis.
+                    Para donos de PMEs que perdem tempo, dinheiro e oportunidades. A <strong className="text-white font-medium">Zenix</strong> é a consultoria tecnológica que organiza seu financeiro, vendas e operações em <span className="text-white">semanas, não meses</span>.
                 </motion.p>
 
                 <motion.div
@@ -46,32 +46,20 @@ export default function Hero() {
                     className="flex flex-col sm:flex-row justify-center gap-4"
                 >
                     <a href="#contato" className="group bg-zenix-primary hover:bg-zenix-primary-hover text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all hover:shadow-[0_0_30px_-5px_rgba(93,38,214,0.6)] flex items-center justify-center gap-2">
-                        Iniciar Avaliação
+                        Iniciar Zenix Deep Dive
                         <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
                     </a>
                 </motion.div>
+                
+                <motion.p
+                   initial={{ opacity: 0, y: 20 }}
+                   animate={{ opacity: 1, y: 0 }}
+                   transition={{ duration: 0.6, delay: 0.4 }}
+                   className="mt-6 text-sm text-gray-500 max-w-2xl mx-auto font-medium"
+                >
+                    Soluções sob medida • Em até 14 dias úteis
+                </motion.p>
             </div>
-
-            {/* KPIs / Authority indicators */}
-            <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.4 }}
-                className="mt-20 relative z-10 pt-10 border-t border-white/5 grid grid-cols-1 md:grid-cols-3 gap-8 text-left max-w-5xl mx-auto"
-            >
-                <div className="pl-6 border-l-2 border-zenix-primary">
-                    <h4 className="text-4xl font-bold text-white mb-2">+40<span className="text-zenix-primary">%</span></h4>
-                    <p className="text-sm text-gray-400">Otimização média de OpEx Tecnológico</p>
-                </div>
-                <div className="pl-6 border-l-2 border-zenix-primary">
-                    <h4 className="text-4xl font-bold text-white mb-2">100<span className="text-zenix-primary">%</span></h4>
-                    <p className="text-sm text-gray-400">Foco Exclusivo no Mercado Segurador</p>
-                </div>
-                <div className="pl-6 border-l-2 border-zenix-primary">
-                    <h4 className="text-4xl font-bold text-white mb-2">360<span className="text-zenix-primary">°</span></h4>
-                    <p className="text-sm text-gray-400">Atuação end-to-end: da avaliação ao deploy</p>
-                </div>
-            </motion.div>
         </section>
     );
 }

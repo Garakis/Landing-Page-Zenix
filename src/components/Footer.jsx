@@ -9,8 +9,12 @@ export default function Footer() {
                     <div className="w-1.5 h-1.5 bg-zenix-primary rounded-full" aria-hidden="true"></div>
                 </div>
 
+                <div className="text-center md:text-left text-sm text-gray-400 font-medium">
+                    <p>Seu CTO as a Service. Modular. Rápido. Escalável.</p>
+                </div>
+
                 <div className="text-center md:text-left text-sm text-gray-500">
-                    <p>&copy; {new Date().getFullYear()} Zenix Consultoria Tecnológica.</p>
+                    <p>&copy; {new Date().getFullYear()} Zenix Tech.</p>
                 </div>
             </div>
         </footer>

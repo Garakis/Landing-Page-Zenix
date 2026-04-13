@@ -17,12 +17,14 @@ export default function Navbar() {
                 <div className="flex justify-between items-center h-20">
                     <div className="flex-shrink-0 flex items-center gap-2">
                         <img src="/zenix-favicon.svg" alt="Zenix Technology Consulting" className="h-6 w-auto" />
+                        <span className="text-white font-bold text-xl tracking-tighter hidden sm:block">ZENIX</span>
                     </div>
                     <div className="hidden md:flex items-center space-x-8">
-                        <a href="#o-gap" className="text-sm font-medium text-gray-300 hover:text-white transition-colors">O Gap do Mercado</a>
-                        <a href="#zdd" className="text-sm font-medium text-gray-300 hover:text-white transition-colors">A Nossa Abordagem</a>
+                        <a href="#dores" className="text-sm font-medium text-gray-300 hover:text-white transition-colors">Dores Comuns</a>
+                        <a href="#modulos" className="text-sm font-medium text-gray-300 hover:text-white transition-colors">Módulos</a>
+                        <a href="#metodologia" className="text-sm font-medium text-gray-300 hover:text-white transition-colors">Como Funciona</a>
                         <a href="#contato" className="bg-zenix-primary hover:bg-zenix-primary-hover text-white px-5 py-2.5 rounded-md text-sm font-semibold transition-all hover:shadow-[0_0_20px_-5px_rgba(93,38,214,0.6)]">
-                            Agendar Diagnóstico
+                            Agendar Zenix Deep Dive
                         </a>
                     </div>
                 </div>

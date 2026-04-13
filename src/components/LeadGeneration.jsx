@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Send, ArrowRight } from 'lucide-react';
+import { Send } from 'lucide-react';
 
 export default function LeadGeneration() {
     return (
@@ -14,7 +14,7 @@ export default function LeadGeneration() {
                         viewport={{ once: true }}
                         className="text-3xl md:text-5xl font-bold text-white mb-6 tracking-tight"
                     >
-                        Expanda as suas margens com Engenharia.
+                        Inicie sua Transformação com o <span className="text-zenix-accent">Zenix Deep Dive</span>
                     </motion.h2>
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}
@@ -23,7 +23,7 @@ export default function LeadGeneration() {
                         transition={{ delay: 0.1 }}
                         className="text-lg md:text-xl text-gray-400 font-light max-w-2xl mx-auto"
                     >
-                        Programe uma conversa com o nosso board executivo. Mapeamos o seu contexto tecnológico para alavancar a próxima fase de consolidação corporativa.
+                        Programe uma conversa com nosso time para entender as limitações e custos da ineficiência da sua empresa. Sem burocracia.
                     </motion.p>
                 </div>
 
@@ -43,13 +43,14 @@ export default function LeadGeneration() {
                         className="relative z-10 space-y-6"
                     >
                         {/* Configurações do FormSubmit */}
-                        <input type="hidden" name="_subject" value="Novo Lead - Zenix Landing Page" />
+                        <input type="hidden" name="_subject" value="Novo Lead - Zenix Deep Dive PME" />
                         <input type="hidden" name="_template" value="table" />
                         <input type="hidden" name="_captcha" value="true" />
+                        <input type="hidden" name="_next" value="https://zenixtech.co/obrigado" />
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div className="space-y-2">
-                                <label htmlFor="name" className="text-sm font-medium text-gray-300">Nome Completo</label>
+                                <label htmlFor="name" className="text-sm font-medium text-gray-300">Seu Nome</label>
                                 <input
                                     type="text"
                                     id="name"
@@ -61,7 +62,7 @@ export default function LeadGeneration() {
                                 />
                             </div>
                             <div className="space-y-2">
-                                <label htmlFor="email" className="text-sm font-medium text-gray-300">Email Corporativo</label>
+                                <label htmlFor="email" className="text-sm font-medium text-gray-300">Email Comercial</label>
                                 <input
                                     type="email"
                                     id="email"
@@ -76,39 +77,39 @@ export default function LeadGeneration() {
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div className="space-y-2">
-                                <label htmlFor="company" className="text-sm font-medium text-gray-300">Empresa</label>
+                                <label htmlFor="company" className="text-sm font-medium text-gray-300">Empresa (PME)</label>
                                 <input
                                     type="text"
                                     id="company"
                                     name="company"
                                     autoComplete="organization"
                                     required
-                                    placeholder="Nome da Seguradora/Corretora"
+                                    placeholder="Nome da sua Empresa"
                                     className="w-full bg-zenix-bg/50 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-zenix-primary focus:ring-1 focus:ring-zenix-primary transition-colors"
                                 />
                             </div>
                             <div className="space-y-2">
-                                <label htmlFor="role" className="text-sm font-medium text-gray-300">Cargo</label>
+                                <label htmlFor="phone" className="text-sm font-medium text-gray-300">WhatsApp / Telefone</label>
                                 <input
-                                    type="text"
-                                    id="role"
-                                    name="role"
-                                    autoComplete="organization-title"
+                                    type="tel"
+                                    id="phone"
+                                    name="phone"
+                                    autoComplete="tel"
                                     required
-                                    placeholder="Ex: CTO, Diretor de Inovação"
+                                    placeholder="(11) 99999-9999"
                                     className="w-full bg-zenix-bg/50 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-zenix-primary focus:ring-1 focus:ring-zenix-primary transition-colors"
                                 />
                             </div>
                         </div>
 
                         <div className="space-y-2">
-                            <label htmlFor="message" className="text-sm font-medium text-gray-300">Qual o seu principal desafio tecnológico hoje?</label>
+                            <label htmlFor="message" className="text-sm font-medium text-gray-300">O que mais está travando o crescimento hoje?</label>
                             <textarea
                                 id="message"
                                 name="message"
                                 required
-                                rows="4"
-                                placeholder="Descreva brevemente o cenário atual e o que buscam solucionar..."
+                                rows="3"
+                                placeholder="Finanças confusas? Equipes perdendo tempo em tarefas repetitivas? Relatório incompleto?"
                                 className="w-full bg-zenix-bg/50 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-zenix-primary focus:ring-1 focus:ring-zenix-primary transition-colors resize-none"
                             ></textarea>
                         </div>
@@ -118,14 +119,11 @@ export default function LeadGeneration() {
                                 type="submit"
                                 className="group w-full md:w-auto bg-zenix-primary hover:bg-zenix-primary-hover text-white px-8 py-4 rounded-lg font-semibold text-base transition-all hover:shadow-[0_0_20px_-5px_rgba(93,38,214,0.6)] flex items-center justify-center gap-2 mx-auto"
                             >
-                                Solicitar Contato Executivo
+                                Agendar meu Zenix Deep Dive
                                 <Send className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" aria-hidden="true" />
                             </button>
                         </div>
 
-                        <p className="text-center text-xs text-gray-500 mt-6">
-                            Seus dados estão seguros. Entraremos em contato em até 24 horas úteis.
-                        </p>
                     </form>
                 </motion.div>
             </div>

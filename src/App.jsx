@@ -1,11 +1,11 @@
 import React from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import StrategicPositioning from './components/StrategicPositioning';
-import Differentiators from './components/Differentiators';
-import TechPlatform from './components/TechPlatform';
-import Footer from './components/Footer';
+import PainPoints from './components/PainPoints';
+import ModulesSection from './components/ModulesSection';
+import Methodology from './components/Methodology';
 import LeadGeneration from './components/LeadGeneration';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -13,9 +13,9 @@ function App() {
       <Navbar />
       <main>
         <Hero />
-        <StrategicPositioning />
-        <Differentiators />
-        <TechPlatform />
+        <PainPoints />
+        <ModulesSection />
+        <Methodology />
         <LeadGeneration />
       </main>
       <Footer />
